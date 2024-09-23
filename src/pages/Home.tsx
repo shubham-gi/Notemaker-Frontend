@@ -1,14 +1,14 @@
 import NoteCard from '../components/NoteCard'
-import Navbar from '../components/Navbar'
+// import Navbar from '../components/Navbar'
 import { MdAdd } from 'react-icons/md'
 import AddEditNotes from '../components/AddEditNotes'
 import Modal from 'react-modal'
 import { useEffect, useState } from 'react'
 import moment from 'moment'
-import Authprovider from '../providers/Authprovider'
+// import Authprovider from '../providers/Authprovider'
 import axiosInstance from '../utils/axiosInstance'
 import { toast } from 'react-toastify'
-import EmptyNote from '../components/Emptynote/index.jsx'
+import EmptyNote from '../components/Emptynote'
 interface NoteType {
   _id: string;
   title: string;
@@ -19,7 +19,6 @@ interface NoteType {
 }
 
 const Home = () => {
-  const [loading, setloading] = useState(true);
   const [notes, setNotes] = useState<NoteType[]>([]);
   const getAllNotes = async () => {
     try {

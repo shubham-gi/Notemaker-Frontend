@@ -1,11 +1,11 @@
 import { useContext, useEffect } from "react"
-import Navbar from "../components/Navbar"
-import Authprovider, { AuthContext } from "../providers/Authprovider"
-import { useNavigate } from "react-router-dom"
+// import Navbar from "../components/Navbar"
+import  { AuthContext } from "../providers/Authprovider"
+// import { useNavigate } from "react-router-dom"
 
 const GenerateNotes = () => {
   const {user}=useContext(AuthContext)
-  const navigate=useNavigate();
+  // const navigate=useNavigate();
   useEffect(() => {
     console.log(user)
     if(!user){

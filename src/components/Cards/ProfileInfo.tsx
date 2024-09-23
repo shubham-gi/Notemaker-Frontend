@@ -2,7 +2,7 @@ import { AuthContext } from "../../providers/Authprovider.js";
 import { getFirstName, getInitials } from "../../utils/helper"
 import { useContext } from "react"
 const ProfileInfo = ({ onLogOut }: { onLogOut: () => void }) => {
-  const { user,signOut,isSignedIn } = useContext(AuthContext);
+  const { user,signOut } = useContext(AuthContext);
   console.log("profileInfo", user)
   if (!user) {
     return (

@@ -1,6 +1,5 @@
-import React from "react";
 import addNote from "../../assets/addNote.png";
-const EmptyNote = ({ setOpenEditAddModal }) => {
+const EmptyNote = ({ setOpenEditAddModal }:{setOpenEditAddModal:any}) => {
   return (
     <div className=" flex flex-col justify-center items-center py-28">
       <img
