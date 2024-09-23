@@ -47,7 +47,7 @@ const Authprovider = ({ children }:{children:ReactNode}) => {
         fetchUserDetails();
     }, [isSignedIn])
     if (loading) {
-        return <Loader/>
+        return <Loader className="h-screen w-screen flex justify-center items-center"/>
     }
     return (
         <AuthContext.Provider value={{user:userInfo,isSignedIn,signOut,setisSignedIn}} >

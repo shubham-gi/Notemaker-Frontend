@@ -117,7 +117,7 @@ const AddEditNotes = ({onClose,fetchAllNotes,notesData,type}:AddEditNotesProps) 
                 <InputTags tags={tags} setTags={setTags} />
             </div>
             <button className="btn-primary font-medium mt-5 px-3 py-1 hover:bg-white hover:text-dark-1 hover:border-slate-700 text-white border-white border rounded " onClick={handleAddNote}>
-                ADD
+                {type=="edit"?"EDIT":"ADD"}
             </button>
 
         </div>

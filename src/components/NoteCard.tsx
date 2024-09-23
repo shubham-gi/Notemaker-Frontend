@@ -8,18 +8,19 @@ interface NoteCardProps {
     onEdit: () => void;
     onDelete: () => void;
     onPinNote: () => void;
+    index?:number
 }
-const NoteCard = ({ title, date, content, tags, isPinned, onEdit, onDelete, onPinNote }: NoteCardProps) => {
+const NoteCard = ({ title, date, content, tags, isPinned, onEdit, onDelete, onPinNote ,index}: NoteCardProps) => {
     return (
         <div className="border rounded p-4  hover:shadow-xl transition-all ease-in-out flex flex-col ">
             <div className="flex items-center justify-between">
                 <div className="">
-                    <h6 className="text-sm font-medium">{title.slice(0, 50)} {title.length>50 && "..."} &nbsp; <span className="text-xs text-slate-500">{date}</span></h6>
+                    <h2 className="text-xl font-medium">{index+". "}{title.slice(0, 50)} {title.length>50 && "..."} &nbsp;<span className="text-sm text-slate-500">{date}</span></h2>
 
                 </div>
                 <MdPushPin className={`icon-btn ${isPinned ? "text-blue-500" : "text-white-100"} ${isPinned ? "hover:text-blue-500" : "hover:text-white-100"}`} onClick={onPinNote} />
             </div>
-            <p className="text-xs text-slate-500">{content.slice(0, 500)}</p>
+            <p className="text-sm italic my-2 text-slate-500">{content.slice(0, 500)}</p>
             <div className="flex items-center justify-between mt-2">
                 <div className="text-xs">
                     {tags.map((tag, index) => {
