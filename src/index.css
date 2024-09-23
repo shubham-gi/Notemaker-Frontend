@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+  .icon-btn {
+    @apply text-xl text-slate-300 cursor-pointer hover:text-slate-100;
+  }
+  .input-label{
+    @apply text-xs text-slate-400;
+  }
+}
