@@ -10,10 +10,11 @@ import Authprovider from './providers/Authprovider';
 
 const App = () => {
   return (
-    <div className="h-screen w-full bg-dark-1 text-white">
+    <div className="min-h-screen  overflow-auto bg-dark-1 text-white">
       <Router>
         <Authprovider>
           <Navbar />
+          
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Home />} />
