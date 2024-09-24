@@ -14,6 +14,7 @@ const App = () => {
       <Router>
         <Authprovider>
           <Navbar />
+          
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Home />} />
